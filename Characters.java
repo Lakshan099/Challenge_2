@@ -1,5 +1,7 @@
 public class Characters {
 
+    // Characters class
+
     private char s;
 
     public Characters(char s) {

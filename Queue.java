@@ -1,6 +1,6 @@
 public class Queue {
 
-    //Queue
+    //Queue class
 
     private int maxSize;
     private Characters queueArray[];

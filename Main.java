@@ -1,5 +1,7 @@
 public class Main {
 
+    //main class
+
     public static void main(String[] args) {
 
         String s = args[0];
