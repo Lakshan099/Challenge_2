@@ -20,11 +20,11 @@ public class Main {
                 symList.insert(l);
             }
 
-            else if (l == ')' && !symList.isEmpty() && symList.peek() == '(') {
+            else if (l == ')' && !symList.isEmpty() && symList.peek().getWord() == '(') {
                 symList.remove();
-            } else if (l == '}' && !symList.isEmpty() && symList.peek() == '{') {
+            } else if (l == '}' && !symList.isEmpty() && symList.peek().getWord() == '{') {
                 symList.remove();
-            } else if (l == ']' && !symList.isEmpty() && symList.peek() == '[') {
+            } else if (l == ']' && !symList.isEmpty() && symList.peek().getWord() == '[') {
                 symList.remove();
             } else {
                 return false;

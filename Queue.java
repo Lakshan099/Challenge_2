@@ -1,14 +1,14 @@
 public class Queue {
 
     private int maxSize;
-    private char queueArray[];
+    private Characters queueArray[];
     private int front;
     private int rear;
     private int nItems;
 
     public Queue(int maxSize) {
         this.maxSize = maxSize;
-        queueArray = new char[maxSize];
+        queueArray = new Characters[maxSize];
         front = 0;
         rear = -1;
         nItems = 0;
@@ -26,7 +26,7 @@ public class Queue {
                 rear = -1;
             }
 
-            char ch = symWord;
+            Characters ch = new Characters(symWord);
             queueArray[++rear] = ch;
             nItems++;
 
@@ -37,9 +37,9 @@ public class Queue {
         return (nItems == 0);
     }
 
-    public char remove() {
+    public Characters remove() {
         if (isEmpty()) {
-            return 0;
+            return null;
         } else {
             if (front == maxSize) {
                 front = 0;
@@ -49,9 +49,9 @@ public class Queue {
         }
     }
 
-    public char peek() {
+    public Characters peek() {
         if (isEmpty()) {
-            return 0;
+            return null;
         } else {
 
             return queueArray[front];
