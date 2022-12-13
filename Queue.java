@@ -18,7 +18,7 @@ public class Queue {
         return (nItems == maxSize);
     }
 
-    public void insert(String symWord) {
+    public void insert(char symWord) {
         if (isFull()) {
             System.out.println("Queue is Full");
         } else {
@@ -49,12 +49,12 @@ public class Queue {
         }
     }
 
-    public Characters peek(int i) {
+    public Characters peek() {
         if (isEmpty()) {
             return null;
         } else {
 
-            return queueArray[i];
+            return queueArray[front];
 
         }
     }

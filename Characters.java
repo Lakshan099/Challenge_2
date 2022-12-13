@@ -1,16 +1,16 @@
 public class Characters {
 
-    private String s;
+    private char s;
 
-    public Characters(String s) {
+    public Characters(char s) {
         this.s = s;
     }
 
-    public void setWord(String s) {
+    public void setWord(char s) {
         this.s = s;
     }
 
-    public String getWord() {
-        return (s);
+    public char getWord() {
+        return s;
     }
 }
