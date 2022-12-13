@@ -1,5 +1,7 @@
 public class Queue {
 
+    //Queue
+
     private int maxSize;
     private Characters queueArray[];
     private int front;
