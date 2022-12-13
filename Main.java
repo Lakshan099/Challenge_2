@@ -14,17 +14,17 @@ public class Main {
 
         Queue symList = new Queue(10);
 
-        for (char l : sysWord.toCharArray()) {
+        for (int i = 0; i < sysWord.length(); i++) {
 
-            if (l == '(' || l == '{' || l == '[') {
-                symList.insert(l);
+            if (sysWord.charAt(i) == '(' || sysWord.charAt(i) == '{' || sysWord.charAt(i) == '[') {
+                symList.insert(sysWord.charAt(i));
             }
 
-            else if (l == ')' && !symList.isEmpty() && symList.peek().getWord() == '(') {
+            else if (sysWord.charAt(i) == ')' && !symList.isEmpty() && symList.peek().getWord() == '(') {
                 symList.remove();
-            } else if (l == '}' && !symList.isEmpty() && symList.peek().getWord() == '{') {
+            } else if (sysWord.charAt(i) == '}' && !symList.isEmpty() && symList.peek().getWord() == '{') {
                 symList.remove();
-            } else if (l == ']' && !symList.isEmpty() && symList.peek().getWord() == '[') {
+            } else if (sysWord.charAt(i) == ']' && !symList.isEmpty() && symList.peek().getWord() == '[') {
                 symList.remove();
             } else {
                 return false;
