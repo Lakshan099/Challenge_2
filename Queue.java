@@ -26,13 +26,10 @@ public class Queue {
                 rear = -1;
             }
 
-            for(int i=0; i<symWord.length(); i++){
-                Characters ch = new Characters(symWord.charAt(i));
-                queueArray[++rear] = ch;
-                nItems++;
-            }
-            
-            
+            Characters ch = new Characters(symWord);
+            queueArray[++rear] = ch;
+            nItems++;
+
         }
     }
 
@@ -52,11 +49,13 @@ public class Queue {
         }
     }
 
-    public Characters peek() {
+    public Characters peek(int i) {
         if (isEmpty()) {
             return null;
         } else {
-                return queueArray[front];
+
+            return queueArray[i];
+
         }
     }
 
