@@ -1,14 +1,14 @@
 public class Queue {
 
     private int maxSize;
-    private Characters queueArray[];
+    private char queueArray[];
     private int front;
     private int rear;
     private int nItems;
 
     public Queue(int maxSize) {
         this.maxSize = maxSize;
-        queueArray = new Characters[maxSize];
+        queueArray = new char[maxSize];
         front = 0;
         rear = -1;
         nItems = 0;
@@ -18,7 +18,7 @@ public class Queue {
         return (nItems == maxSize);
     }
 
-    public void insert(String symWord) {
+    public void insert(char symWord) {
         if (isFull()) {
             System.out.println("Queue is Full");
         } else {
@@ -26,7 +26,7 @@ public class Queue {
                 rear = -1;
             }
 
-            Characters ch = new Characters(symWord);
+            char ch = symWord;
             queueArray[++rear] = ch;
             nItems++;
 
@@ -37,9 +37,9 @@ public class Queue {
         return (nItems == 0);
     }
 
-    public Characters remove() {
+    public char remove() {
         if (isEmpty()) {
-            return null;
+            return 0;
         } else {
             if (front == maxSize) {
                 front = 0;
@@ -49,12 +49,12 @@ public class Queue {
         }
     }
 
-    public Characters peek(int i) {
+    public char peek() {
         if (isEmpty()) {
-            return null;
+            return 0;
         } else {
 
-            return queueArray[i];
+            return queueArray[front];
 
         }
     }
