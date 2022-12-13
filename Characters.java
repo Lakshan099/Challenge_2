@@ -1,16 +1,16 @@
 public class Characters {
 
-    private String symWord;
+    private char s;
 
-    public Characters(String symWord) {
-        this.symWord = symWord;
+    public Characters(char s) {
+        this.s = s;
     }
 
-    public void setWord(String symWord) {
-        this.symWord = symWord;
+    public void setWord(char s) {
+        this.s = s;
     }
 
-    public String getWord() {
-        return (symWord);
+    public char getWord() {
+        return (s);
     }
 }

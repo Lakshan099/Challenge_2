@@ -26,9 +26,13 @@ public class Queue {
                 rear = -1;
             }
 
-            Characters ch = new Characters(symWord);
-            queueArray[++rear] = ch;
-            nItems++;
+            for(int i=0; i<symWord.length(); i++){
+                Characters ch = new Characters(symWord.charAt(i));
+                queueArray[++rear] = ch;
+                nItems++;
+            }
+            
+            
         }
     }
 
@@ -52,7 +56,7 @@ public class Queue {
         if (isEmpty()) {
             return null;
         } else {
-            return queueArray[front];
+                return queueArray[front];
         }
     }
 
